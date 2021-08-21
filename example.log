@@ -1,0 +1,12 @@
+WARN AsyncHttpClient-1-1 io.netty.util.HashedWheelTimer - An exception was thrown by TimerTask.
+java.lang.IllegalStateException: cannot be started once stopped
+	at io.netty.util.HashedWheelTimer.start(HashedWheelTimer.java:341)
+	at io.netty.util.HashedWheelTimer.newTimeout(HashedWheelTimer.java:416)
+	at org.asynchttpclient.netty.channel.DefaultChannelPool.scheduleNewIdleChannelDetector(DefaultChannelPool.java:95)
+	at org.asynchttpclient.netty.channel.DefaultChannelPool.access$900(DefaultChannelPool.java:43)
+	at org.asynchttpclient.netty.channel.DefaultChannelPool$IdleChannelDetector.run(DefaultChannelPool.java:378)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:672)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:747)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:472)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
